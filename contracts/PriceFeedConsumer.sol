@@ -13,21 +13,24 @@ import './interfaces/IPriceFeedConsumer.sol';
 contract PriceFeedConsumer is Ownable, IPriceFeedConsumer{
     using SafeMath for uint256;
 
+    address internal immutable OSQTH_ADDRESS = 0xf1B99e3E573A1a9C5E6B2Ce818b617F0E664E86B;
+    address internal immutable ETH_USD_ORACLE = 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419;
+
     constructor() public{}
 
-    function getEthPrice() public override returns(uint){
+    function getEthPrice() public view override returns(uint){
 
     }
 
-    function getEth2Price() public override returns(uint){
+    function getEth2Price() public view override returns(uint){
 
     }
 
-    function getMarkPrice() public override returns(uint){
+    function getMarkPrice() public view override returns(uint){
 
     }
 
-    function getOSQthPrice() public override returns(uint){
+    function getOSQthPrice() public view override returns(uint){
 
     }
 
