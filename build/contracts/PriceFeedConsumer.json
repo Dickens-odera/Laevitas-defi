@@ -3378,15 +3378,61 @@
     "version": "0.8.11+commit.d7f03943.Emscripten.clang"
   },
   "networks": {
-    "5777": {
-      "events": {},
+    "4": {
+      "events": {
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
       "links": {},
-      "address": "0x2CFF0396DF260f6Dd576Ab9915ccdfa2208E6ef7",
-      "transactionHash": "0x1e1802453aa355bdbcccc9663c609783c85d0618b2b64ac4ea78d6786a694ba0"
+      "address": "0xB7E8Cf7Ca67f226780007410F4c2a3D9736Bf4bd",
+      "transactionHash": "0x0ebfc0d8a3eee2eb3f683764241814feea54a502460aa3d7115198239eae2fb4"
+    },
+    "5777": {
+      "events": {
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x14ECc83A0eF78017b229C2473C8c7142960c53AE",
+      "transactionHash": "0x9859f3ede27483f2cee82686ddb9988fad51419f93ef6093327d917f8d1d55ca"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-01-21T17:49:09.657Z",
+  "updatedAt": "2022-01-21T19:06:23.709Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "A simple contract that interacts with external contracts by fetching token price data",

@@ -3,8 +3,11 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 require('dotenv').config();
 
 
-const INFURAL_RPC_URL = process.env.INFURAL_RPC_URL;
+const ALCHEMY_RPC_URL = process.env.ALCHEMY_RPC_URL;
+const INFURA_RPC_URL = process.env.INFURA_RPC_URL;
 const MNEMONIC = process.env.MNEMONIC;
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
+
 
 module.exports = {
 
@@ -36,13 +39,22 @@ module.exports = {
     //timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
     //skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     },
+    rinkeby: {
+      provider: () => new HDWalletProvider(MNEMONIC, `https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_RPC_URL}`),
+      network_id: 4,
+      gas: 5500000,        // Ropsten has a lower block limit than mainnet
+      confirmations: 2,    // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true,     // Skip dry run before migrations? (default: false for public nets )
+      networkCheckTimeout: 1000000000
+    },
+  },
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
     // network_id: 2111,   // This network is yours, in the cloud.
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
-  },
 
   // Set default mocha options here, use special reporters etc.
   mocha: {
@@ -69,6 +81,13 @@ module.exports = {
   // Note: if you migrated your contracts prior to enabling this field in your Truffle project and want
   // those previously migrated contracts available in the .db directory, you will need to run the following:
   // $ truffle migrate --reset --compile-all
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+
+  api_keys: {
+    etherscan: ETHERSCAN_API_KEY
+  },
 
   db: {
     enabled: false
