@@ -54,7 +54,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getEth2Price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEthPrice\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMarkPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getOSQthPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/Dickens/Programming/Blockchain/Projects/Interviews/Laevitas Defi Protocol/contracts/interfaces/IPriceFeedConsumer.sol\":\"IPriceFeedConsumer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Dickens/Programming/Blockchain/Projects/Interviews/Laevitas Defi Protocol/contracts/interfaces/IPriceFeedConsumer.sol\":{\"keccak256\":\"0x5227606f56248aed8e789fc22ecb746a26a3b51adeb766be0c131cb0d3750272\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://08d892b0b7a9350f31aa34ab78f4c04949d4660598c0c01715e38cd538a7fb2c\",\"dweb:/ipfs/QmZyuAGhsHURoQjxbk7dscMDRVP9GCecmMjmXUkasCqy76\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getEth2Price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEthPrice\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMarkPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getOSQthPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IPriceFeedConsumer.sol\":\"IPriceFeedConsumer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":850},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IPriceFeedConsumer.sol\":{\"keccak256\":\"0x5227606f56248aed8e789fc22ecb746a26a3b51adeb766be0c131cb0d3750272\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://08d892b0b7a9350f31aa34ab78f4c04949d4660598c0c01715e38cd538a7fb2c\",\"dweb:/ipfs/QmZyuAGhsHURoQjxbk7dscMDRVP9GCecmMjmXUkasCqy76\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -63,20 +63,20 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ninterface IPriceFeedConsumer{\r\n    function getEthPrice() external view returns(int);\r\n    function getEth2Price() external view returns(uint);\r\n    function getMarkPrice() external view returns(uint);\r\n    function getOSQthPrice() external view returns(uint);\r\n}",
-  "sourcePath": "D:/Dickens/Programming/Blockchain/Projects/Interviews/Laevitas Defi Protocol/contracts/interfaces/IPriceFeedConsumer.sol",
+  "sourcePath": "D:\\Dickens\\Programming\\Blockchain\\Projects\\Interviews\\Laevitas Defi Protocol\\contracts\\interfaces\\IPriceFeedConsumer.sol",
   "ast": {
-    "absolutePath": "/D/Dickens/Programming/Blockchain/Projects/Interviews/Laevitas Defi Protocol/contracts/interfaces/IPriceFeedConsumer.sol",
+    "absolutePath": "project:/contracts/interfaces/IPriceFeedConsumer.sol",
     "exportedSymbols": {
       "IPriceFeedConsumer": [
-        101
+        642
       ]
     },
-    "id": 102,
+    "id": 643,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 80,
+        "id": 621,
         "literals": [
           "solidity",
           "^",
@@ -84,7 +84,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:23:1"
+        "src": "33:23:7"
       },
       {
         "abstract": false,
@@ -93,42 +93,42 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 101,
+        "id": 642,
         "linearizedBaseContracts": [
-          101
+          642
         ],
         "name": "IPriceFeedConsumer",
-        "nameLocation": "70:18:1",
+        "nameLocation": "70:18:7",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "67c9b017",
-            "id": 85,
+            "id": 626,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getEthPrice",
-            "nameLocation": "104:11:1",
+            "nameLocation": "104:11:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 81,
+              "id": 622,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "115:2:1"
+              "src": "115:2:7"
             },
             "returnParameters": {
-              "id": 84,
+              "id": 625,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 83,
+                  "id": 624,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 85,
-                  "src": "140:3:1",
+                  "scope": 626,
+                  "src": "140:3:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -136,10 +136,10 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 82,
+                    "id": 623,
                     "name": "int",
                     "nodeType": "ElementaryTypeName",
-                    "src": "140:3:1",
+                    "src": "140:3:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -148,42 +148,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "139:5:1"
+              "src": "139:5:7"
             },
-            "scope": 101,
-            "src": "95:50:1",
+            "scope": 642,
+            "src": "95:50:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "7dc48d76",
-            "id": 90,
+            "id": 631,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getEth2Price",
-            "nameLocation": "160:12:1",
+            "nameLocation": "160:12:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 86,
+              "id": 627,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "172:2:1"
+              "src": "172:2:7"
             },
             "returnParameters": {
-              "id": 89,
+              "id": 630,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 88,
+                  "id": 629,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 90,
-                  "src": "197:4:1",
+                  "scope": 631,
+                  "src": "197:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -191,10 +191,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 87,
+                    "id": 628,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "197:4:1",
+                    "src": "197:4:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -203,42 +203,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "196:6:1"
+              "src": "196:6:7"
             },
-            "scope": 101,
-            "src": "151:52:1",
+            "scope": 642,
+            "src": "151:52:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "60409632",
-            "id": 95,
+            "id": 636,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getMarkPrice",
-            "nameLocation": "218:12:1",
+            "nameLocation": "218:12:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 91,
+              "id": 632,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "230:2:1"
+              "src": "230:2:7"
             },
             "returnParameters": {
-              "id": 94,
+              "id": 635,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 93,
+                  "id": 634,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 95,
-                  "src": "255:4:1",
+                  "scope": 636,
+                  "src": "255:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -246,10 +246,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 92,
+                    "id": 633,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "255:4:1",
+                    "src": "255:4:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -258,42 +258,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "254:6:1"
+              "src": "254:6:7"
             },
-            "scope": 101,
-            "src": "209:52:1",
+            "scope": 642,
+            "src": "209:52:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "7edd7334",
-            "id": 100,
+            "id": 641,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getOSQthPrice",
-            "nameLocation": "276:13:1",
+            "nameLocation": "276:13:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 96,
+              "id": 637,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "289:2:1"
+              "src": "289:2:7"
             },
             "returnParameters": {
-              "id": 99,
+              "id": 640,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 98,
+                  "id": 639,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 100,
-                  "src": "314:4:1",
+                  "scope": 641,
+                  "src": "314:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -301,10 +301,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 97,
+                    "id": 638,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "314:4:1",
+                    "src": "314:4:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -313,35 +313,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "313:6:1"
+              "src": "313:6:7"
             },
-            "scope": 101,
-            "src": "267:53:1",
+            "scope": 642,
+            "src": "267:53:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 102,
-        "src": "60:263:1",
+        "scope": 643,
+        "src": "60:263:7",
         "usedErrors": []
       }
     ],
-    "src": "33:290:1"
+    "src": "33:290:7"
   },
   "legacyAST": {
-    "absolutePath": "/D/Dickens/Programming/Blockchain/Projects/Interviews/Laevitas Defi Protocol/contracts/interfaces/IPriceFeedConsumer.sol",
+    "absolutePath": "project:/contracts/interfaces/IPriceFeedConsumer.sol",
     "exportedSymbols": {
       "IPriceFeedConsumer": [
-        101
+        642
       ]
     },
-    "id": 102,
+    "id": 643,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 80,
+        "id": 621,
         "literals": [
           "solidity",
           "^",
@@ -349,7 +349,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:23:1"
+        "src": "33:23:7"
       },
       {
         "abstract": false,
@@ -358,42 +358,42 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 101,
+        "id": 642,
         "linearizedBaseContracts": [
-          101
+          642
         ],
         "name": "IPriceFeedConsumer",
-        "nameLocation": "70:18:1",
+        "nameLocation": "70:18:7",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "67c9b017",
-            "id": 85,
+            "id": 626,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getEthPrice",
-            "nameLocation": "104:11:1",
+            "nameLocation": "104:11:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 81,
+              "id": 622,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "115:2:1"
+              "src": "115:2:7"
             },
             "returnParameters": {
-              "id": 84,
+              "id": 625,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 83,
+                  "id": 624,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 85,
-                  "src": "140:3:1",
+                  "scope": 626,
+                  "src": "140:3:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -401,10 +401,10 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 82,
+                    "id": 623,
                     "name": "int",
                     "nodeType": "ElementaryTypeName",
-                    "src": "140:3:1",
+                    "src": "140:3:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -413,42 +413,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "139:5:1"
+              "src": "139:5:7"
             },
-            "scope": 101,
-            "src": "95:50:1",
+            "scope": 642,
+            "src": "95:50:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "7dc48d76",
-            "id": 90,
+            "id": 631,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getEth2Price",
-            "nameLocation": "160:12:1",
+            "nameLocation": "160:12:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 86,
+              "id": 627,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "172:2:1"
+              "src": "172:2:7"
             },
             "returnParameters": {
-              "id": 89,
+              "id": 630,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 88,
+                  "id": 629,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 90,
-                  "src": "197:4:1",
+                  "scope": 631,
+                  "src": "197:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -456,10 +456,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 87,
+                    "id": 628,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "197:4:1",
+                    "src": "197:4:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -468,42 +468,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "196:6:1"
+              "src": "196:6:7"
             },
-            "scope": 101,
-            "src": "151:52:1",
+            "scope": 642,
+            "src": "151:52:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "60409632",
-            "id": 95,
+            "id": 636,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getMarkPrice",
-            "nameLocation": "218:12:1",
+            "nameLocation": "218:12:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 91,
+              "id": 632,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "230:2:1"
+              "src": "230:2:7"
             },
             "returnParameters": {
-              "id": 94,
+              "id": 635,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 93,
+                  "id": 634,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 95,
-                  "src": "255:4:1",
+                  "scope": 636,
+                  "src": "255:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -511,10 +511,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 92,
+                    "id": 633,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "255:4:1",
+                    "src": "255:4:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -523,42 +523,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "254:6:1"
+              "src": "254:6:7"
             },
-            "scope": 101,
-            "src": "209:52:1",
+            "scope": 642,
+            "src": "209:52:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "7edd7334",
-            "id": 100,
+            "id": 641,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getOSQthPrice",
-            "nameLocation": "276:13:1",
+            "nameLocation": "276:13:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 96,
+              "id": 637,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "289:2:1"
+              "src": "289:2:7"
             },
             "returnParameters": {
-              "id": 99,
+              "id": 640,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 98,
+                  "id": 639,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 100,
-                  "src": "314:4:1",
+                  "scope": 641,
+                  "src": "314:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -566,10 +566,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 97,
+                    "id": 638,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "314:4:1",
+                    "src": "314:4:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -578,21 +578,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "313:6:1"
+              "src": "313:6:7"
             },
-            "scope": 101,
-            "src": "267:53:1",
+            "scope": 642,
+            "src": "267:53:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 102,
-        "src": "60:263:1",
+        "scope": 643,
+        "src": "60:263:7",
         "usedErrors": []
       }
     ],
-    "src": "33:290:1"
+    "src": "33:290:7"
   },
   "compiler": {
     "name": "solc",
@@ -600,7 +600,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-01-21T17:15:21.524Z",
+  "updatedAt": "2022-01-21T17:48:36.560Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

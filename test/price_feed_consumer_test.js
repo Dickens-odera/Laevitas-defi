@@ -1,9 +1,9 @@
 const PriceFeedConsumer = artifacts.require("PriceFeedConsumer");
 
-contract("PriceFeedConsumer", function (accounts) {
+contract("PriceFeedConsumer",  (accounts) => {
   let priceFeedConsumer;
   let oraclePriceFeed;
-  
+
   beforeEach(async() => {
     [owner, alice, bob ] = accounts;
     priceFeedConsumer = await PriceFeedConsumer.deployed();
