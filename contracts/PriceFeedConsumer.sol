@@ -117,7 +117,7 @@ contract PriceFeedConsumer is IPriceFeedConsumer{
 
     }
 
-        /**
+    /**
     * @dev calculates the funding rate from the payments made by long Squeeth traders to short Squeeth traders 
     * based on the disparity between the Index Price (ETH²) and the Mark Price (current trading price of Squeeth), 
     * regularly (Mark — Index).
@@ -125,7 +125,13 @@ contract PriceFeedConsumer is IPriceFeedConsumer{
     function getCurrentFundingRate(uint _period) public view returns(uint){
         uint markPrice = getMarkPrice(_period);
         uint indexPrice = getEth2Price(_period);
-        return markPrice.sub(indexPrice);
+        uint positionSize = 1;
+        uint difference = markPrice.sub(indexPrice);
+        return positionSize.mul(difference);
+    }
+
+    function getHistoricalFundingRates(uint _period) public view returns(uint){
+    
     }
 
 }
