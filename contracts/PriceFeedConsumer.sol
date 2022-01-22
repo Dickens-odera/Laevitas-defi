@@ -17,6 +17,8 @@ interface SqueethProtocolInterface {
     function getDenormalizedMarkForFunding(uint _period) external view returns(uint);
     function getExpectedNormalizationFactor() external view returns(uint);
     function getVolatilityPrice() external view returns(uint);
+    function getCurrentFundingRate() external view returns(uint);
+    function getHistoricalFundingRate() external view returns(uint);
 }
 
 interface SqueethOracleInterface{
@@ -129,11 +131,11 @@ contract PriceFeedConsumer is IPriceFeedConsumer{
         uint indexPrice = getEth2Price(_period);
         uint positionSize = 1;
         uint difference = markPrice.sub(indexPrice);
-        return positionSize.mul(difference);
+        return (positionSize.mul(difference) * 10) / 100;
     }
 
     function getHistoricalFundingRates(uint _period) public view returns(uint){
-    
+        //return SqueethProtocolInterface(squeethProtocol).getHistoricalFundingRate();
     }
 
 }
