@@ -11345,8 +11345,8 @@
         }
       },
       "links": {},
-      "address": "0x7d0934893Ca1D80e70b251C199DE623B5daa9ebf",
-      "transactionHash": "0xf38a758f90dca3132a9497c297d6477f46fc2a9d5f7d4ade3110183be4f919c1"
+      "address": "0x3031F5bd2C295F3685524Bc0F0FB98B63315d93d",
+      "transactionHash": "0x92b96f0a61923cd8ef8f39d79161b91c85b2b6f24e2eb09056f02802455a66c3"
     },
     "5777": {
       "events": {
@@ -11376,7 +11376,7 @@
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-01-22T17:27:27.648Z",
+  "updatedAt": "2022-01-22T21:25:35.882Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "A simple contract that interacts with external contracts by fetching token price data",

@@ -17369,12 +17369,12 @@
         }
       },
       "links": {},
-      "address": "0x918be80530bf18EC560f8aBaA2Df64D4ecfd9A66",
-      "transactionHash": "0x677c7ee1623d44ad5bef6cc8bfacbf5bec58a513537d6f5665ef94abee9c4b9a"
+      "address": "0x0629B00e835FbD83D8F6fB90Aa2036F1E924e935",
+      "transactionHash": "0x4ff16d3635b573ba448f28391ea5af0db1c7276d06868d66292e0bd7284519fe"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-01-22T17:25:28.324Z",
+  "updatedAt": "2022-01-22T21:23:35.844Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "A Mock Controller for testing out the Squeeth controller implementation",
