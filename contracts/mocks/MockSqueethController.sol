@@ -153,7 +153,7 @@ contract MockSqueethController is Ownable{
     */
     function getHistoricalFundingRate(uint _periodFrom, uint _periodTo) public view returns(uint){
         require(_periodFrom != _periodTo,"Invalid Period Range");
-        require(_periodFrom > _periodTo,"Period To must be greator than the initial range");
+        require(_periodTo > _periodFrom,"Period To must be greator than the initial range");
         require(_periodTo != 0,"Final Period Range cannot be zero");
         require(_periodFrom > 0,"Intitial Period Range must not be zero");
 
