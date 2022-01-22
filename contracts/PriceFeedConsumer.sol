@@ -21,6 +21,24 @@ interface SqueethProtocolInterface {
     function getVolatilityPrice() external view returns(uint);
 }
 
+interface SqueethOracleInterface{
+    function getTwap(
+        address _pool,
+        address _base,
+        address _quote,
+        uint32 _period,
+        bool _checkPeriod
+    ) external view returns (uint256);
+
+    function getHistoricalTwap(
+        address _pool,
+        address _base,
+        address _quote,
+        uint32 _secondsAgoToStartOfTwap,
+        uint32 _secondsAgoToEndOfTwap
+    ) external view returns (uint256);
+}
+
 /**
  * @title PriceFeed Contract
  * @dev A simple contract that interacts with external contracts by fetching token price data
@@ -28,33 +46,52 @@ interface SqueethProtocolInterface {
 contract PriceFeedConsumer is IPriceFeedConsumer{
     using SafeMath for uint256;
     
-    address internal constant OSQTH_ADDRESS = 0xf1B99e3E573A1a9C5E6B2Ce818b617F0E664E86B;
-    address internal constant KOVAN_ETH_USD_ORACLE = 0x9326BFA02ADD2366b30bacB125260Af641031331;
+    address internal constant OSQTH_TOKEN_ADDRESS = 0xf1B99e3E573A1a9C5E6B2Ce818b617F0E664E86B;
+    address internal constant CHAINLINK_KOVAN_ETH_USD_ORACLE = 0x9326BFA02ADD2366b30bacB125260Af641031331;
     address internal constant SQUEETH_CONTROLLER = 0x64187ae08781B09368e6253F9E94951243A493D5;
+    address internal constant SQUEETH_ORACLE = 0x65D66c76447ccB45dAf1e8044e918fA786A483A1;
+    address internal constant SQU_ETH_UNI_V3_POOL = 0x82c427AdFDf2d245Ec51D8046b41c4ee87F0d29C;
+    address internal constant ETH_USDC_UNI_V3_POOL = 0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8;
 
     AggregatorV3Interface internal priceFeed; //instantiate an oracle pricefeed
     //Controller internal controller;
 
     address public immutable squeethProtocol;
+    address public immutable squeethOracle;
 
-    constructor(address _protocol) public{
+    constructor(address _protocol, address _squeethOracle) public{
         squeethProtocol = _protocol;
-        priceFeed = AggregatorV3Interface(KOVAN_ETH_USD_ORACLE);
+        squeethOracle = _squeethOracle;
+        priceFeed = AggregatorV3Interface(CHAINLINK_KOVAN_ETH_USD_ORACLE);
     }
 
     /**
     * @dev returns the latest price of ETH in USD from the chaainlink oracle price feed
     */
-    function getEthPrice() public view override returns(int){
+    function getChainLinkEthPrice() public view returns(int){
         (,int price,,,) = priceFeed.latestRoundData();
         return price;
     }
 
     /**
-    * @dev returns the latest ETH(2) price in USD from the squeeth protocol
+    * @dev get the ETH/USDC price from the Squeeth Uniswap V3 Pool
     */
-    function getEth2Price() public view override returns(uint){
+    function getSquEthPrice(
+        address _pool,
+        address _base,
+        address _quote,
+        uint32 _period,
+        bool _checkPeriod
+    ) public view override returns(uint){
+        return SqueethOracleInterface(squeethOracle).getTwap(_pool,_base, _quote,_period, _checkPeriod);
+    }
 
+    /**
+    * @dev returns the latest ETH(2) price (get the index price of the powerPerp, scaled down)
+    * @param _period period which you want to calculate twap with
+    */
+    function getEth2Price(uint _period) public view override returns(uint){
+        return SqueethProtocolInterface(squeethProtocol).getIndex(_period);
     }
 
     /**
@@ -66,9 +103,9 @@ contract PriceFeedConsumer is IPriceFeedConsumer{
     }
 
     /**
-    * @dev get the latest squeeth price in USD 
+    * @dev get the latest squeeth price in USD from the Squeeth-Uniswap V3 pool
     */
-    function getOSQthPrice() public view override returns(int){
+    function getOSQthPrice() public view override returns(uint){
 
     }
 
@@ -80,7 +117,7 @@ contract PriceFeedConsumer is IPriceFeedConsumer{
     }
 
     function getExpectedNormalizationFactor() external view returns (uint256){
-        return SqueethProtocolInterface(squeethProtocol).getExpectedNormalizationFactor(_period);
+        return SqueethProtocolInterface(squeethProtocol).getExpectedNormalizationFactor();
     }
 
 }
