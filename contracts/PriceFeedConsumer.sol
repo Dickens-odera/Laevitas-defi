@@ -77,10 +77,12 @@ contract PriceFeedConsumer is IPriceFeedConsumer{
     */
     function getSquUniswapPoolEthPrice(
         address _pool,
+        address _base,
+        address _quote,
         uint32 _period,
         bool _checkPeriod
-    ) public view override returns(uint){
-        return SqueethOracleInterface(squeethOracle).getTwap(_pool,WETH_TOKEN_ADDRESS, USDC_TOKEN_ADDRESS,_period, _checkPeriod);
+    ) public view returns(uint){
+        return SqueethOracleInterface(squeethOracle).getTwap(_pool,_base, _quote,_period, _checkPeriod);
     }
 
     /**

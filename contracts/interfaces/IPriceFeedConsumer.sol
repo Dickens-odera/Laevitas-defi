@@ -5,6 +5,8 @@ pragma abicoder v2;
 interface IPriceFeedConsumer{
     function getSquUniswapPoolEthPrice(
         address _pool,
+        address _base,
+        address _quote,
         uint32 _period,
         bool _checkPeriod
     ) external view returns(uint);
