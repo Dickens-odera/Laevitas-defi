@@ -84,8 +84,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -128,8 +127,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -142,8 +140,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -204,8 +201,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -218,8 +214,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -232,8 +227,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -6326,27 +6320,27 @@
     "absolutePath": "/D/Dickens/Programming/Blockchain/Projects/Interviews/Laevitas Defi Protocol/contracts/mocks/MockoSQUEETH.sol",
     "exportedSymbols": {
       "Context": [
-        1912
+        1921
       ],
       "ERC20": [
-        1787
+        1796
       ],
       "IERC20": [
-        1865
+        1874
       ],
       "IERC20Metadata": [
-        1890
+        1899
       ],
       "MockoSQUEETH": [
-        1090
+        1099
       ]
     },
-    "id": 1091,
+    "id": 1100,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1064,
+        "id": 1073,
         "literals": [
           "solidity",
           "^",
@@ -6357,7 +6351,7 @@
         "src": "33:23:7"
       },
       {
-        "id": 1065,
+        "id": 1074,
         "literals": [
           "abicoder",
           "v2"
@@ -6368,11 +6362,11 @@
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "id": 1066,
+        "id": 1075,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 1091,
-        "sourceUnit": 1788,
+        "scope": 1100,
+        "sourceUnit": 1797,
         "src": "81:55:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6382,13 +6376,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 1067,
+              "id": 1076,
               "name": "ERC20",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1787,
+              "referencedDeclaration": 1796,
               "src": "165:5:7"
             },
-            "id": 1068,
+            "id": 1077,
             "nodeType": "InheritanceSpecifier",
             "src": "165:5:7"
           }
@@ -6397,13 +6391,13 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 1090,
+        "id": 1099,
         "linearizedBaseContracts": [
-          1090,
-          1787,
-          1890,
-          1865,
-          1912
+          1099,
+          1796,
+          1899,
+          1874,
+          1921
         ],
         "name": "MockoSQUEETH",
         "nameLocation": "149:12:7",
@@ -6411,7 +6405,7 @@
         "nodes": [
           {
             "body": {
-              "id": 1088,
+              "id": 1097,
               "nodeType": "Block",
               "src": "240:70:7",
               "statements": [
@@ -6420,7 +6414,7 @@
                     "arguments": [
                       {
                         "expression": {
-                          "id": 1078,
+                          "id": 1087,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -6431,7 +6425,7 @@
                             "typeString": "msg"
                           }
                         },
-                        "id": 1079,
+                        "id": 1088,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -6449,17 +6443,17 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 1085,
+                        "id": 1094,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 1080,
+                          "id": 1089,
                           "name": "_initialSupply",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1070,
+                          "referencedDeclaration": 1079,
                           "src": "268:14:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -6473,14 +6467,14 @@
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 1084,
+                          "id": 1093,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "hexValue": "3130",
-                            "id": 1081,
+                            "id": 1090,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -6500,18 +6494,18 @@
                             "arguments": [],
                             "expression": {
                               "argumentTypes": [],
-                              "id": 1082,
+                              "id": 1091,
                               "name": "decimals",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1316,
+                              "referencedDeclaration": 1325,
                               "src": "291:8:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_uint8_$",
                                 "typeString": "function () view returns (uint8)"
                               }
                             },
-                            "id": 1083,
+                            "id": 1092,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -6550,18 +6544,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1077,
+                      "id": 1086,
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1647,
+                      "referencedDeclaration": 1656,
                       "src": "251:5:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 1086,
+                    "id": 1095,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6576,13 +6570,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1087,
+                  "id": 1096,
                   "nodeType": "ExpressionStatement",
                   "src": "251:51:7"
                 }
               ]
             },
-            "id": 1089,
+            "id": 1098,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -6590,7 +6584,7 @@
                 "arguments": [
                   {
                     "hexValue": "4d6f636b2053515545455448",
-                    "id": 1073,
+                    "id": 1082,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -6606,7 +6600,7 @@
                   },
                   {
                     "hexValue": "6d4f53515448",
-                    "id": 1074,
+                    "id": 1083,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -6621,13 +6615,13 @@
                     "value": "mOSQTH"
                   }
                 ],
-                "id": 1075,
+                "id": 1084,
                 "kind": "baseConstructorSpecifier",
                 "modifierName": {
-                  "id": 1072,
+                  "id": 1081,
                   "name": "ERC20",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1787,
+                  "referencedDeclaration": 1796,
                   "src": "210:5:7"
                 },
                 "nodeType": "ModifierInvocation",
@@ -6638,17 +6632,17 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1071,
+              "id": 1080,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1070,
+                  "id": 1079,
                   "mutability": "mutable",
                   "name": "_initialSupply",
                   "nameLocation": "194:14:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1089,
+                  "scope": 1098,
                   "src": "189:19:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -6657,7 +6651,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1069,
+                    "id": 1078,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "189:4:7",
@@ -6672,19 +6666,19 @@
               "src": "188:21:7"
             },
             "returnParameters": {
-              "id": 1076,
+              "id": 1085,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "240:0:7"
             },
-            "scope": 1090,
+            "scope": 1099,
             "src": "177:133:7",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 1091,
+        "scope": 1100,
         "src": "140:173:7",
         "usedErrors": []
       }
@@ -6695,27 +6689,27 @@
     "absolutePath": "/D/Dickens/Programming/Blockchain/Projects/Interviews/Laevitas Defi Protocol/contracts/mocks/MockoSQUEETH.sol",
     "exportedSymbols": {
       "Context": [
-        1912
+        1921
       ],
       "ERC20": [
-        1787
+        1796
       ],
       "IERC20": [
-        1865
+        1874
       ],
       "IERC20Metadata": [
-        1890
+        1899
       ],
       "MockoSQUEETH": [
-        1090
+        1099
       ]
     },
-    "id": 1091,
+    "id": 1100,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1064,
+        "id": 1073,
         "literals": [
           "solidity",
           "^",
@@ -6726,7 +6720,7 @@
         "src": "33:23:7"
       },
       {
-        "id": 1065,
+        "id": 1074,
         "literals": [
           "abicoder",
           "v2"
@@ -6737,11 +6731,11 @@
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "id": 1066,
+        "id": 1075,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 1091,
-        "sourceUnit": 1788,
+        "scope": 1100,
+        "sourceUnit": 1797,
         "src": "81:55:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6751,13 +6745,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 1067,
+              "id": 1076,
               "name": "ERC20",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1787,
+              "referencedDeclaration": 1796,
               "src": "165:5:7"
             },
-            "id": 1068,
+            "id": 1077,
             "nodeType": "InheritanceSpecifier",
             "src": "165:5:7"
           }
@@ -6766,13 +6760,13 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 1090,
+        "id": 1099,
         "linearizedBaseContracts": [
-          1090,
-          1787,
-          1890,
-          1865,
-          1912
+          1099,
+          1796,
+          1899,
+          1874,
+          1921
         ],
         "name": "MockoSQUEETH",
         "nameLocation": "149:12:7",
@@ -6780,7 +6774,7 @@
         "nodes": [
           {
             "body": {
-              "id": 1088,
+              "id": 1097,
               "nodeType": "Block",
               "src": "240:70:7",
               "statements": [
@@ -6789,7 +6783,7 @@
                     "arguments": [
                       {
                         "expression": {
-                          "id": 1078,
+                          "id": 1087,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -6800,7 +6794,7 @@
                             "typeString": "msg"
                           }
                         },
-                        "id": 1079,
+                        "id": 1088,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -6818,17 +6812,17 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 1085,
+                        "id": 1094,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 1080,
+                          "id": 1089,
                           "name": "_initialSupply",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1070,
+                          "referencedDeclaration": 1079,
                           "src": "268:14:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -6842,14 +6836,14 @@
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 1084,
+                          "id": 1093,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "hexValue": "3130",
-                            "id": 1081,
+                            "id": 1090,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -6869,18 +6863,18 @@
                             "arguments": [],
                             "expression": {
                               "argumentTypes": [],
-                              "id": 1082,
+                              "id": 1091,
                               "name": "decimals",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1316,
+                              "referencedDeclaration": 1325,
                               "src": "291:8:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_uint8_$",
                                 "typeString": "function () view returns (uint8)"
                               }
                             },
-                            "id": 1083,
+                            "id": 1092,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -6919,18 +6913,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1077,
+                      "id": 1086,
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1647,
+                      "referencedDeclaration": 1656,
                       "src": "251:5:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 1086,
+                    "id": 1095,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6945,13 +6939,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1087,
+                  "id": 1096,
                   "nodeType": "ExpressionStatement",
                   "src": "251:51:7"
                 }
               ]
             },
-            "id": 1089,
+            "id": 1098,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -6959,7 +6953,7 @@
                 "arguments": [
                   {
                     "hexValue": "4d6f636b2053515545455448",
-                    "id": 1073,
+                    "id": 1082,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -6975,7 +6969,7 @@
                   },
                   {
                     "hexValue": "6d4f53515448",
-                    "id": 1074,
+                    "id": 1083,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -6990,13 +6984,13 @@
                     "value": "mOSQTH"
                   }
                 ],
-                "id": 1075,
+                "id": 1084,
                 "kind": "baseConstructorSpecifier",
                 "modifierName": {
-                  "id": 1072,
+                  "id": 1081,
                   "name": "ERC20",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1787,
+                  "referencedDeclaration": 1796,
                   "src": "210:5:7"
                 },
                 "nodeType": "ModifierInvocation",
@@ -7007,17 +7001,17 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1071,
+              "id": 1080,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1070,
+                  "id": 1079,
                   "mutability": "mutable",
                   "name": "_initialSupply",
                   "nameLocation": "194:14:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1089,
+                  "scope": 1098,
                   "src": "189:19:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7026,7 +7020,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1069,
+                    "id": 1078,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "189:4:7",
@@ -7041,19 +7035,19 @@
               "src": "188:21:7"
             },
             "returnParameters": {
-              "id": 1076,
+              "id": 1085,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "240:0:7"
             },
-            "scope": 1090,
+            "scope": 1099,
             "src": "177:133:7",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 1091,
+        "scope": 1100,
         "src": "140:173:7",
         "usedErrors": []
       }
@@ -7124,8 +7118,7 @@
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-01-22T21:20:04.457Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-01-22T22:38:00.659Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

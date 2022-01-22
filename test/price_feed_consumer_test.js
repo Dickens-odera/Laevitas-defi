@@ -5,6 +5,7 @@ const MockUSDC = artifacts.require('MockUSDC');
 const MockWETH = artifacts.require('MockWETH');
 const MockosQueethToken = artifacts.require('MockoSQUEETH');
 
+const assert = require('assert');
 
 contract("PriceFeedConsumer",  (accounts) => {
   let priceFeedConsumer;
@@ -85,20 +86,72 @@ contract("PriceFeedConsumer",  (accounts) => {
         assert.equal(result.logs[0].args.date, new Date().getTime());
       });
 
-      it('can return the mark price (oSQUEETH)', async() => {
-
-      });
-
-      it('can ssss... ',async() => {
-
-      });
     });
 
   });
 
-  describe("price data", () => {
-    it("should fetch the latest ETH/USD price from onchain price feed oracle", async() => {
-      const latestETHPrice = await priceFeedConsumer.getEthPrice();
+  describe("Price Consumer and Oracle Functions", () => {
+    it('can set pool price', async() => {
+      const poolPrice = 100;
+      const result = await mockOracle.setPrice(mockOracle, poolPrice, { from: owner });
+
+      const poolPeriodPrice = await mockOracle.poolPeriodPrice(mockOracle);
+
+      assert(result.receipt.status, true);
+      assert.equal(poolPeriodPrice, 200);
+    });
+
+    it("can fetch the latest ETH/USDC price from squeeth/vuniswap-3 price pool", async() => {
+      const latestETHPrice = await priceFeedConsumer.getSquUniswapPoolEthPrice(mockOracle, mockWETH, mockUSDC, duration ,true);
+      const equalOracleEthUsdcPrice = await mockOracle.getTwap(mockOracle, mockWETH, mockUSDC, duration, true);
+      console.log("WETH/USDC Pool Price",latestETHPrice);
+
+      assert.equal(latestETHPrice, equalOracleEthUsdcPrice);
+    });
+
+    it('can return the mark price (oSQUEETH)', async () => {
+      const markPrice = await priceFeedConsumer.getMarkPrice(duration);
+
+      assert.equal(markPrice, 1);
+    });
+
+    it('can fetch the current funding rate by duration', async () => {
+      const fundingRate = await priceFeedConsumer.getCurrentFundingRate(duration);
+
+      const markPrice = await priceFeedConsumer.getMarkPrice(duration);
+      const indexPrice = await priceFeedConsumer.getMarkPrice(duration);
+      const position = 1;
+      const diff = markPrice - indexPrice;
+      const calculatedFundingRate = ((position * diff) * 10 / 100);
+
+      assert.equal(fundingRate, calculatedFundingRate);
+    });
+
+  });
+
+  describe("Ownership and Contract Restrictions", () =>{
+    it('can only allow the contract owner to set the pool price', async() => {
+      const newDuration = 2;
+      const result = await mockController.setTransactionPeriod(newDuration, { from: owner });
+      try{
+        const result = await mockOracle.setPrice(newDuration, { from: alice });
+      
+      } catch(error){
+        assert(error.message.includes("Ownable: caller is not the owner"));
+        return;
+      }
+      assert(false);
+    });
+
+    it('can only allow the contract owner to set the pool tick price', async() => {
+      try{
+        const tickPrice = 100;
+        const result = await mockOracle.ssetAverageTick(mockOracle, tickPrice, { from : alice });
+      }catch(error){
+        assert(error.message.includes("Ownable: caller is not the owner"));
+        return;
+      }
+      assert(false);
     });
   });
 });

@@ -2,17 +2,19 @@
 pragma solidity ^0.8.0;
 pragma abicoder v2;
 
-contract MockSqueethOracle {
+import '@openzeppelin/contracts/access/Ownable.sol';
+
+contract MockSqueethOracle is Ownable{
     mapping(address => uint256) public poolPeriodPrice;
     mapping(address => int24) public poolTick;
     
     uint32 public constant MAX_POOL_PERIOD = 1;
 
-    function setPrice(address _pool, uint256 _price) external {
+    function setPrice(address _pool, uint256 _price) external onlyOwner {
         poolPeriodPrice[_pool] = _price;
     }
 
-    function setAverageTick(address _pool, int24 _poolTick) external {
+    function setAverageTick(address _pool, int24 _poolTick) external onlyOwner{
         poolTick[_pool] = _poolTick;
     }
 

@@ -43,7 +43,7 @@ interface SqueethOracleInterface{
  * @title PriceFeed Contract
  * @dev A simple contract that interacts with external contracts by fetching token price data
  */
-contract PriceFeedConsumer is IPriceFeedConsumer{
+contract PriceFeedConsumer is IPriceFeedConsumer,Ownable{
     using SafeMath for uint256;
     
     address internal constant OSQTH_TOKEN_ADDRESS = 0xf1B99e3E573A1a9C5E6B2Ce818b617F0E664E86B;
