@@ -20,18 +20,14 @@ contract MockSqueethController is Ownable{
     mapping(uint => bool) public isExistingMarkPricePeriod; //to check if this rate is already added(for test purposes)
 
     uint public currentPosition = 1;
-    uint public totalIndexes = 0;
+    uint public totalIndexPrices = 0;
     uint public totalMarkPrices = 0;
-    uint public totalFundingRounds = 0;
 
-    uint public fundingRate;
-    uint public historicalFundingRate;
-    uint public volatilityPprice;
+    uint public volatilityPrice = 1;
     uint public transactionPeriod; //dummy transaction period to be set by the contract owner(for testing purposes)
 
     Counters.Counter private indexIds;
     Counters.Counter private markPriceIds;
-    Counters.Counter private fundingRateIds;
     Counters.Counter private denormalizedMarkPriceForFundingIds;
 
     constructor() public{
@@ -55,9 +51,9 @@ contract MockSqueethController is Ownable{
 
     event NewIndex(address indexed caller, uint indexed newIndex, uint indexed date); // new ETH^2 price
     event NewMarkPrice(address indexed user, uint indexed newMarkprice, uint indexed date);
-    event NewFundingRate(address indexed user, uint indexed newFundingRate, uint indexed date);
     event NewTransactionPeriod(address indexed user, uint indexed newTxPeriod, uint indexed date);
     event NewDenormalizedMarkPriceForFunding(address indexed user, uint indexed newFundingMarkPrice, uint indexed date);
+
     /**
     * @dev sets a mock transaction period
     * @return bool true if new tx period is set successfully otherwise false
@@ -78,7 +74,7 @@ contract MockSqueethController is Ownable{
         indexIds.increment();
         uint currentIndexId = indexIds.current();
         indexByDuration[_period] = currentIndexId;
-        totalIndexes = totalIndexes.add(1); // to prevent integer overflow
+        totalIndexPrices = totalIndexPrices.add(1); // to prevent integer overflow
         emit NewIndex(msg.sender,currentIndexId, block.timestamp);
         return true;
     }
@@ -93,6 +89,7 @@ contract MockSqueethController is Ownable{
         uint currentDenormalizedMarkPrice = markPriceIds.current();
         denormalizedMarkPrice[_period] = currentDenormalizedMarkPrice;
         totalMarkPrices = totalMarkPrices.add(1);
+        emit NewMarkPrice(msg.sender,currentDenormalizedMarkPrice, block.timestamp);
         return true;
     }
     
@@ -105,7 +102,7 @@ contract MockSqueethController is Ownable{
         denormalizedMarkPriceForFundingIds.increment();
         uint currentDenFundIdForFunding = denormalizedMarkPriceForFundingIds.current();
         denormalizedMarkPriceForFunding[_period] = currentDenFundIdForFunding;
-        emit NewDenormalizedMarkPriceForFunding(msg.sender, _period, block.timestamp);
+        emit NewDenormalizedMarkPriceForFunding(msg.sender, currentDenFundIdForFunding, block.timestamp);
         return true;
     }
 
@@ -133,8 +130,11 @@ contract MockSqueethController is Ownable{
         return denormalizedMarkPriceForFunding[_period];
     }
 
+    /**
+    * returns the price volatility between the trades of ETH^2 and oSQTH
+    */
     function getVolatilityPrice() public view returns(uint){
-
+        return volatilityPrice;
     }
 
     /**
