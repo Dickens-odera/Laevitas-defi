@@ -7121,7 +7121,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-01-23T20:20:14.452Z",
+  "updatedAt": "2022-01-23T20:27:49.330Z",
   "devdoc": {
     "details": "This interacts with the specified squeeth protocol oracle functions",
     "kind": "dev",

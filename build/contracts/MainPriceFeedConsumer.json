@@ -47,7 +47,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -60,7 +61,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -73,7 +75,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -86,7 +89,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -106,7 +110,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -119,7 +124,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -132,7 +138,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -145,7 +152,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -158,7 +166,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -171,7 +180,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -184,7 +194,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -197,7 +208,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -210,7 +222,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -223,7 +236,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -236,7 +250,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -262,7 +277,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -275,7 +291,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -294,7 +311,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -313,7 +331,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -352,7 +371,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -391,7 +411,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -410,7 +431,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -423,7 +445,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -442,7 +465,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_controller\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_oracle\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"controller\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ethUSDCUniswapV3Pool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCurrentFundingRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_period\",\"type\":\"uint32\"}],\"name\":\"getDenormalizedMarkForFunding\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_period\",\"type\":\"uint32\"}],\"name\":\"getDenormalizedMarkPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pool\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_base\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_quote\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"_secondsAgoToStartOfTwap\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"_secondsAgoToEndOfTwap\",\"type\":\"uint32\"}],\"name\":\"getHistoricalTwap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_period\",\"type\":\"uint32\"}],\"name\":\"getIndexPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pool\",\"type\":\"address\"}],\"name\":\"getMaxPeriod\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pool\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_base\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_quote\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"_period\",\"type\":\"uint32\"},{\"internalType\":\"bool\",\"name\":\"_checkPeriod\",\"type\":\"bool\"}],\"name\":\"getTwap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracle\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ropstenEthUsdcPoolAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ropstenNetControllerAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ropstenNetSqueethUniPoolAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ropstenOracleAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ropstenQuoterAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ropstenSqueethAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ropstenSwapRouterAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"squeethControllerAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"squeethETHUniswapV3Pool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"squeethOracleAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"squeethTokenAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"usdcTokenAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"wethTokenAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getCurrentFundingRate()\":{\"details\":\"can be used for on-chain and off-chain calculations\"},\"getDenormalizedMarkForFunding(uint32)\":{\"details\":\"this is the mark that would be used to calculate a new normalization factor if funding was calculated now\",\"params\":{\"_period\":\"period which you want to calculate twap with\"},\"returns\":{\"_0\":\"mark price denominated in $USD, scaled by 1e18\"}},\"getDenormalizedMarkPrice(uint32)\":{\"params\":{\"_period\":\"period of time for the twap in seconds\"},\"returns\":{\"_0\":\"mark price denominated in $USD, scaled by 1e18\"}},\"getHistoricalTwap(address,address,address,uint32,uint32)\":{\"details\":\"if the _secondsAgoToStartOfTwap period is longer than the current timestamp - first timestamp stored in the pool, this will revert with \\\"OLD\\\"\",\"params\":{\"_base\":\"base currency. to get eth/usd price, eth is base token\",\"_pool\":\"uniswap pool address\",\"_quote\":\"quote currency. to get eth/usd price, usd is the quote currency\",\"_secondsAgoToEndOfTwap\":\"amount of seconds in the past to end calculating time-weighted average\",\"_secondsAgoToStartOfTwap\":\"amount of seconds in the past to start calculating time-weighted average\"},\"returns\":{\"_0\":\"price of 1 base currency in quote currency. scaled by 1e18\"}},\"getIndexPrice(uint32)\":{\"details\":\"the index price is scaled down by INDEX_SCALE in the associated PowerXBase librarythis is the index price used when calculating funding and for collateralization\",\"params\":{\"_period\":\"period which you want to calculate twap with\"},\"returns\":{\"_0\":\"index price denominated in $USD, scaled by 1e18\"}},\"getMaxPeriod(address)\":{\"params\":{\"_pool\":\"uniswap pool address\"},\"returns\":{\"_0\":\"max period can be used to request twap\"}},\"getTwap(address,address,address,uint32,bool)\":{\"details\":\"if period is longer than the current timestamp - first timestamp stored in the pool, this will revert with \\\"OLD\\\"\",\"params\":{\"_base\":\"base currency. to get eth/usd price, eth is base token\",\"_period\":\"number of seconds in the past to start calculating time-weighted average\",\"_pool\":\"uniswap pool address\",\"_quote\":\"quote currency. to get eth/usd price, usd is the quote currency\"},\"returns\":{\"_0\":\"price of 1 base currency in quote currency. scaled by 1e18\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"NewPriceFeedConsumer\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getCurrentFundingRate()\":{\"notice\":\"returns the expected normalization factor, if the funding is paid right now\"},\"getDenormalizedMarkForFunding(uint32)\":{\"notice\":\"get the mark price of powerPerp before funding has been applied\"},\"getDenormalizedMarkPrice(uint32)\":{\"notice\":\"get the expected mark price of powerPerp after funding has been applied\"},\"getHistoricalTwap(address,address,address,uint32,uint32)\":{\"notice\":\"get twap for a specific period of time, converted with base & quote token decimals\"},\"getIndexPrice(uint32)\":{\"notice\":\"get the index price of the powerPerp, scaled down\"},\"getMaxPeriod(address)\":{\"notice\":\"get the max period that can be used to request twap\"},\"getTwap(address,address,address,uint32,bool)\":{\"notice\":\"get twap converted with base & quote token decimals\"}},\"notice\":\"intercacts with the squeeth protocol and oracle to fetch Opyn Squeeth and ETH^2 prices and historical data\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/Dickens/Programming/Blockchain/Projects/Interviews/Laevitas Defi Protocol/contracts/MainPriceFeedConsumer.sol\":\"MainPriceFeedConsumer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Dickens/Programming/Blockchain/Projects/Interviews/Laevitas Defi Protocol/contracts/MainPriceFeedConsumer.sol\":{\"keccak256\":\"0xe305aa6d13ca8c215ad463d97f1388009bb92cebd2514c98429d531cd9ad645d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b359b62cb08b317bdace48c31fd3dd11a7576240648376394e8280c6b5e0e5b4\",\"dweb:/ipfs/Qmb7wp3E9jGVMu2NMZUhZG8t1bkSzEovFZyYc1n1FVYrjP\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981\",\"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]}},\"version\":1}",
@@ -11547,9 +11571,17 @@
     "name": "solc",
     "version": "0.8.11+commit.d7f03943.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0xD92f5deE5c01FE2A6E90807A4157b10c5d439efE",
+      "transactionHash": "0x09baf7c2fe5f87dbbc8ed289284ad3e903cbef23c2c7d02efd870aec671f2ad7"
+    }
+  },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-01-23T20:20:14.434Z",
+  "updatedAt": "2022-01-23T20:46:57.678Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {
